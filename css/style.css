@@ -39,16 +39,20 @@ nav a:hover {
     color: #c300ff; /* Ändra färg vid hover */
 }
 body {
-    
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh; /* Se till att body alltid är minst lika hög som hela skärmen */
     padding-bottom: 1px; /* Extra utrymme längst ner */
     box-sizing: border-box; /* Se till att padding räknas in korrekt */
     position: relative;
     min-height: 100vh;
+    
 }
 footer {
     background-color: #333;
     color: white;
-    position: absolute;
+    position: relative;
+    margin-top: auto;
     bottom: 0%;
     left: 0%;
     width: 100%;
@@ -67,6 +71,9 @@ footer {
     text-align: center;
     margin: 0;
     padding: 0;
+  }
+  main {
+    flex: 1;
   }
   
   .hero img {
@@ -92,6 +99,7 @@ footer {
   
   main section {
     padding: 20px;
+    padding-bottom: 20px;
   }
   .hero p {
     background: rgba(0, 0, 0, 0.5);
@@ -336,4 +344,19 @@ input[type="checkbox"] {
     border: 0;
     clip: rect(0, 0, 0, 0);
     overflow: hidden;
+}
+/* Media query för mobilskärmar */
+@media (max-width: 768px) {
+    form {
+        width: 90%; /* Gör formuläret lite smalare på små skärmar */
+        padding: 15px; /* Ge lite mer padding */
+    }
+
+    input, textarea, select {
+        width: 100%; /* Gör fälten 100% av formulärets bredd */
+        font-size: 14px; /* Minska textstorleken för att passa bättre på små skärmar */
+        padding: 12px; /* Minska padding för att ge mer utrymme */
+    }
+
+
 }
