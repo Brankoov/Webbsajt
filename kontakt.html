@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="sv">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Projekt</title>
+    <link rel="stylesheet" href="/Webbsajt/css/style.css">
+</head>
+<body>
+    <header>
+        <button class="menu-toggle" aria-label="Öppna meny">&#9776;</button>
+        <nav>
+            <ul class="menu-list">
+                <li><a href="index.html">Startsida</a></li>                
+                <li><a href="teknik.html">Teknik</a></li>
+                <li><a href="om-mig.html">Om mig</a></li>
+                <li><a href="kontakt.html">Kontakt</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <main>
+        <section id="kontakt">
+          <h1>Kontakta mig</h1>
+          <p>Du kan nå mig via följande kontaktuppgifter eller använda formuläret nedan:</p>
+      
+          <!-- Kontaktuppgifter -->
+          <article class="kontakt-info">
+            <a href="tel:+46737321157">📞 +46 73 732 11 57</a><br>
+            <a href="banne_nikolic@hotmail.com">✉️ banne_nikolic@hotmail.com</a><br>
+            <a href="https://github.com/Brankoov" target="_blank">GitHub</a><br>        
+          </article>
+      
+          <!-- Kontaktformulär -->
+          <form action="#" method="POST">
+            <label for="namn">Namn:</label>
+            <input type="text" id="namn" name="namn" required>
+      
+            <label for="email">E-post:</label>
+            <input type="email" id="email" name="email" required>
+      
+            <label for="ämne">Ämne:</label>
+            <select id="ämne" name="ämne">
+              <option value="fråga">Fråga</option>
+              <option value="feedback">Feedback</option>
+              <option value="annat">Annat</option>
+            </select>
+      
+            <label for="meddelande">Meddelande:</label>
+            <textarea id="meddelande" name="meddelande" rows="5" required></textarea>
+      
+        
+      
+            <button type="submit">Skicka</button><br>
+          </form>
+        </section>
+    </main>
+    
+    <footer>
+        © 2025 Branko Nikolic | Kontakt: banne_nikolic@hotmail.com | 
+    </footer>
+    <script src="/Webbsajt/js/java.js"></script>
+</body>
+</html>

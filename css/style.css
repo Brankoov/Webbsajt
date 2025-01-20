@@ -1,0 +1,362 @@
+html, body {
+    margin: 0;
+    padding: 0;
+    overflow-x: hidden;
+}
+header {
+    display: flex; /* Använd Flexbox */
+    justify-content: space-between; /* Separera innehållet i header */
+    align-items: center; /* Centrera vertikalt */
+    
+    background-color: #333;
+    color: white;
+    position: relative;
+    top: 0;
+    left: 0;
+    
+    width: 100%;
+    z-index: 1;
+    padding: 10px 20px; /* Lite utrymme runt */
+    
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1); /* Skapa skugga under headern */
+}
+
+nav {
+    display: flex; /* Flexbox för länkarna */
+    gap: 20px; /* Mellanrum mellan länkarna */
+
+    
+}
+
+nav a {
+    color: white;
+    text-decoration: none;
+    font-size: 16px;
+    padding: 5px 10px;
+}
+
+nav a:hover {
+    color: #c300ff; /* Ändra färg vid hover */
+}
+body {
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh; /* Se till att body alltid är minst lika hög som hela skärmen */
+    padding-bottom: 1px; /* Extra utrymme längst ner */
+    box-sizing: border-box; /* Se till att padding räknas in korrekt */
+    position: relative;
+    min-height: 100vh;
+    
+}
+footer {
+    background-color: #333;
+    color: white;
+    position: relative;
+    margin-top: auto;
+    bottom: 0%;
+    left: 0%;
+    width: 100%;
+    padding: 15px;
+    text-align: center;
+}
+.hero {
+    position: relative;
+    width: 100%;
+    height: 100vh;
+    overflow: hidden;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    margin: 0;
+    padding: 0;
+  }
+  main {
+    flex: 1;
+  }
+  
+  .hero img {
+    width: 100%;
+    height: 100%;
+    min-width: 100px;
+    min-height: 100px;
+    object-fit: cover;
+    position: absolute;
+    top: 0;
+    left: 0;
+    z-index: -1;
+  }
+  
+  .hero .overlay {
+    background: rgba(0, 0, 0, 0.5);
+    padding: 20px;
+    border-radius: 10px;
+    color: white;
+    font-size: 25px;
+    transform: translateY(-200px); /* Flyttar upp overlay med 20px */
+  }
+  
+  main section {
+    padding: 20px;
+    padding-bottom: 20px;
+  }
+  .hero p {
+    background: rgba(0, 0, 0, 0.5);
+    padding: 20px;
+    border-radius: 10px;
+    color: white;
+    transform: translateY(-200px); /* Flyttar upp overlay med 20px */
+    font-size: 25px;
+}
+/* Om mig-sidan */
+.om-mig {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 20px;
+}
+
+.om-mig-bild {
+    border-radius: 50%; /* Rundar av bilden för en profilbild */
+    width: 250px;
+    height: 250px;
+    object-fit: cover;
+    margin-bottom: 20px;
+}
+
+.text-container {
+    text-align: center;
+    max-width: 800px;
+    margin: 0 auto;
+}
+
+.text-container h4 {
+    font-size: 2rem;
+    margin-bottom: 20px;
+}
+
+.text-container p {
+    font-size: 1rem;
+    line-height: 1.5;
+    margin-bottom: 20px;
+}
+#om-mig-text{
+    font-weight: 550;
+}
+.teknik-sida {
+    padding: 20px;
+    background-color: #f5f7f7;
+}
+
+.teknik-sida h2 {
+    text-align: center;
+    margin-bottom: 20px;
+    font-size: 40px;
+}
+
+.teknik-sida .articles {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 20px;
+    justify-content: center;
+}
+
+.teknik-sida article {
+    flex: 1 1 calc(50% - 20px); /* 50% bredd minus gap för att ge plats åt mellanrum */
+    max-width: 500px; /* Justera vid behov */
+    border: 1px solid #ccc;
+    border-radius: 8px;
+    padding: 15px;
+    background-color: #ffffff;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    text-align: center;
+}
+
+.teknik-sida article img {
+    width: 100%;
+    max-width: 250px;
+    height: auto;
+    border-radius: 8px;
+    margin-bottom: 10px;
+}
+
+.teknik-sida article h2 {
+    font-size: 1.2em;
+    color: #333;
+    margin: 10px 0;
+}
+
+.teknik-sida article p {
+    font-size: 0.9em;
+    color: #555;
+}
+
+/* Media queries för mobilskärmar */
+@media (max-width: 768px) {
+    .teknik-sida article {
+        flex: 1 1 100%; /* En artikel per rad */
+    }
+}
+.menu-list {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+    display: flex;
+    gap: 20px;
+}
+
+.menu-list li {
+    margin: 0;
+}
+
+.menu-list li a {
+    color: white;
+    text-decoration: none;
+    font-size: 16px;
+}
+
+.menu-toggle {
+    display: none; /* Dölj hamburgermenyn på större skärmar */
+    font-size: 30px;
+    background: none;
+    border: none;
+    cursor: pointer;
+    color: white;
+}
+
+@media (max-width: 768px) {
+    .menu-toggle {
+        display: block; /* Visa hamburgermenyn på små skärmar */
+    }
+
+    .menu-list {
+        display: none; /* Dölj menyn som standard på små skärmar */
+        flex-direction: column;
+        position: absolute;
+        top: 60px;
+        right: 0;
+        background-color: #333;
+        width: 100%;
+        text-align: center;
+    }
+
+    .menu-list.show {
+        display: flex; /* Visa menyn när den är öppen */
+    }
+
+    .menu-list li {
+        padding: 10px 0;
+    }
+
+    .menu-list li a {
+        font-size: 18px;
+    }
+}
+.nav-menu {
+    display: flex;
+    gap: 20px; /* Mellanrum mellan menyalternativen */
+    margin-left: auto; /* Skickar menyn till höger */
+}
+
+nav a {
+    color: white;
+    text-decoration: none;
+    font-size: 16px;
+    padding: 5px 10px;
+}
+
+nav a:hover {
+    color: #c300ff;
+}
+#kontakt {
+    padding: 20px;
+    text-align: center;
+}
+
+/* Stil för kontaktlänkar */
+.kontakt-info a {
+    display: block;
+    margin: 10px 0;
+    color: #333;
+    text-decoration: none;
+    font-size: 18px; /* Gör texten större */
+    font-weight: bold; /* Gör texten fetare */
+}
+
+/* Stil för formulär */
+form {
+    max-width: 600px;
+    margin: 20px auto;
+    display: flex;
+    flex-direction: column;
+    gap: 15px; /* Ökar avståndet mellan fälten */
+}
+
+input, textarea, select {
+    width: 100%;
+    padding: 15px; /* Gör rutorna större */
+    border: 3px solid #888; /* Tydligare kant */
+    border-radius: 8px; /* Rundade hörn */
+    background-color: #f9f9f9; /* Lätt bakgrundsfärg */
+    font-size: 16px; /* Gör texten i fälten större */
+}
+
+input:focus, textarea:focus, select:focus {
+    border-color: #1a1ab9; /* Markera valt fält */
+    outline: none; /* Ta bort standard-outline */
+    box-shadow: 0 0 5px #1a1ab9; /* Lägg till en skugga */
+}
+
+button {
+    background-color: #1a1ab9;
+    color: white;
+    padding: 15px;
+    border: none;
+    border-radius: 10px;
+    font-size: 16px;
+    cursor: pointer;
+}
+
+button:hover {
+    background-color: #6060bd;
+}
+
+/* För tydligare checkbox och label */
+label {
+    font-size: 16px;
+    font-weight: bold;
+}
+
+input[type="checkbox"] {
+    margin-right: 10px; /* Avstånd mellan checkbox och text */
+}
+#kontakt h1 {
+    font-size: 45px;
+    color: rgb(6, 4, 14);
+}
+.sr-only {
+    position: absolute;
+    width: 1px;
+    height: 1px;
+    margin: -1px;
+    padding: 0;
+    border: 0;
+    clip: rect(0, 0, 0, 0);
+    overflow: hidden;
+}
+/* Media query för mobilskärmar */
+@media (max-width: 768px) {
+    form {
+        width: 90%; /* Gör formuläret lite smalare på små skärmar */
+        padding: 15px; /* Ge lite mer padding */
+    }
+
+    input, textarea, select {
+        width: 100%; /* Gör fälten 100% av formulärets bredd */
+        font-size: 14px; /* Minska textstorleken för att passa bättre på små skärmar */
+        padding: 12px; /* Minska padding för att ge mer utrymme */
+    }
+
+
+}
